@@ -1,0 +1,8 @@
+@media (max-width: 1000px){
+    .menu__btn{
+        display: block;
+    }
+    .menu__list{
+        display: none;
+    }
+}

@@ -1,0 +1,713 @@
+@import "reset.css";
+@import "media.css";
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    color: inherit;
+}
+.container{
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+/* HEADER */
+/* .header{
+    min-height: calc(100vh - 50px);
+} */
+.header__top{
+    padding-top: 29px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    margin-left: 19px;
+}
+.menu{
+    margin-top: 16px;
+}
+.menu__list{
+    display: flex;
+    column-gap: 30px;
+}
+.menu__item{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #001E64;
+}
+.menu__link:hover{
+    border-bottom: 1px solid #001E64;
+}
+.phone{
+    margin-top: 11px;
+    margin-right: 40px;
+}
+
+.header__content{
+    background: url("../images/base.png") center no-repeat;
+    background-size: cover;
+    padding-bottom: 80px;
+    margin-top: -67px;
+    min-height: calc(100vh - 50px);
+}
+.header__title{
+    padding-top: 210px;
+    padding-left: 112px;
+    margin-bottom: 130px;
+    max-width: 589px;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 95px;
+    color: #001E64;
+}
+.header-slider{
+    max-width: 407px;
+    padding-bottom: 160px;
+    padding-top: 43px;
+    padding-left: 112px;
+}
+.header-slider__text{
+    margin-bottom: 25px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.slick-prev, .slick-next{
+    position: absolute;
+    left: 50px
+}
+.slick-prev{
+    top: 0;
+    left: 51px;
+}
+.slick-next{
+    bottom: 0;
+}
+.slick-dots{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 58px;
+    bottom: 55px;
+    left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.slick-dots li{
+    opacity: 0.5;
+}
+.slick-dots .slick-active{
+    opacity: 1;
+}
+
+.slick-dots  li::before{
+    content: "0"
+}
+.header__content-btn{
+    padding: 14px 88px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 20px;
+    position: relative;
+    left: 112px;
+    bottom: 115px;
+}
+.header__content-box{
+    justify-content: flex-end;
+    margin-right: 30px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    display: flex;
+}
+.header__content-link--active{
+    font-weight: 700;
+}
+
+.product__content{
+    padding-top: 100px;
+}
+.product__content-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.product__content-names{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 88px;
+    width: 422px;
+}
+.product__content-name{
+    text-align: center;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #232222;
+    overflow: visible;
+}
+.product__content-name.slick-current{
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 36px;
+    color: #001E64;
+}
+.product__content-name{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.product-prev, .product-next{
+    position: absolute;
+    left: 59.2%;
+}
+.product-prev{
+    top: 0;
+}
+.product-next{
+    bottom: 70px;
+}
+.product__content-items{
+    width: 600px;
+}
+.product__content-box{
+    display: flex;
+    justify-content: space-between;
+}
+.product__content-about{
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #232222;
+}
+.product__content-about span{
+    display: block;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #001E64;
+}
+.product__content-img{
+    object-fit: cover;
+}
+.product__content-title{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #001E64;
+}
+.product__content-text{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232222;
+    margin-bottom: 27px;
+}
+.product__content-btn{
+    border: 1px solid #001E64;
+    border-radius: 20px;
+    padding: 12px 85px;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #001E64;
+}
+.product__benefits{
+    background: url("../images/product__base.png") top center no-repeat;
+    background-size: cover;
+    padding-bottom: 95px;
+    padding-top: 257px;
+}
+.product__benefits-wrapper{
+    padding: 0 90px;
+    display: flex;
+    justify-content: space-around;
+}
+.product__benefits-text{
+    background: url("../images/pr_rak.svg") center no-repeat;
+    background-size: cover;
+    width: 180px;
+    min-height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+
+.seafood__items{
+    padding-top: 101px;
+}
+.seafood__item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+.seafood__item-title{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #001E64;
+    margin-bottom: 30px;
+}
+.seafood__item-content{
+    display: block;
+    width: 420px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #232222;
+}
+.seafood__item-content + .seafood__item-content{
+    margin-top: 25px;
+}
+
+.seafood__item-title--second{
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+.seafood__item-text--left{
+    padding-right: 180px;
+}
+.seafood__article{
+    padding-top: 55px;
+    text-align: center;
+    display: block;
+    margin-bottom: 100px;
+}
+.seafood__article-text{
+    margin: 10px auto 0;
+    max-width: 696px;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #232222;
+}
+.seafood__article-text span{
+    display: block;
+}
+
+.contacts{
+    margin-bottom: 30px;
+    background-image: url("../images/contacts_block.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.contacts-box{
+    max-width: 337px;
+    margin-left: auto;
+    background-color: #FFFFFF;
+    padding: 32px 20px 32px 0;
+}
+
+.contacts__above{
+    width: 195px;
+    margin-bottom: 30px;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #001E64;
+    
+}
+.contacts-item{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #232222;
+}
+.contacts-item + .contacts-item{
+    margin-top: 30px;
+}
+.contacts-item--mail{
+    width: 156px;
+}
+
+.footer-box{
+    padding-left: 23px;
+    padding-right: 45px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 108px;
+}
+.footer__logos{
+    margin-top: 64px;
+}
+.footer__logos-logo + .footer__logos-logo{
+    margin-left: 10px;
+}
+.footer__logos-logo:hover svg path{
+    fill: #001E64;
+}
+.footer__logos-svg--change{
+    transform: translateY(-15%);
+}
+.footer__menu{
+    margin-top: 74px;
+}
+.footer__menu-list{
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #232222;
+}
+.footer__menu-item + .footer__menu-item{
+    margin-left: 30px;
+}
+.footer__menu-item:hover{
+    border-bottom: 1px solid black;
+}
+.menu__btn{
+    display: none;
+}
+.footer__menu-btn{
+    display: none;
+}
+@media (max-width: 1800px){
+    ul.contacts-items {
+        margin-left: 10px;
+    }
+    .contacts__above {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 1140px){
+    .footer__menu, .footer__logo{
+        display: none;
+    }
+    .footer-box {
+        justify-content: center;
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 1035px){
+    .product__content-names {
+        padding-left: 38px;
+        width: 281px;
+    }
+    .product-prev, .product-next {
+        left: 54%;
+    }
+    .product__content-items {
+        margin-right: 60px;
+    }
+    .seafood__item {
+        display: block;
+    }
+    .seafood__item-text {
+        width: 100%;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        margin-bottom: 20px;
+    }
+    .seafood__item-content{
+        width: 100%;
+    }
+    .seafood__item-text--left {
+        padding: 0;
+    }
+    .seafood__item-img{
+        display: flex;
+        margin: 0 auto;
+    }
+    .seafood__item-img--adaptive{
+        display: none;
+    }
+}
+@media (max-width: 1170px){
+    .contacts{
+        background: none;
+    }
+    .contacts-box {
+        margin-left: 0;
+    }
+}
+@media (max-width: 1000px){
+    .menu__btn{
+        display: block;
+        width: 40px;
+        padding: 13px 0;
+        position: relative;
+        z-index: 10;
+    }
+    .menu__btn::after, .menu__btn::before{
+        content: "";
+        left: 0;
+        right: 0;
+        height: 4px;
+        position: absolute;
+        background-color: #001E64;
+    }
+    .menu__btn::before{
+        top: 0;
+    }
+    .menu__btn::after{
+        bottom: 0;
+    }
+    .menu__btn span{
+        display: block;
+        height: 4px;
+        background-color: #001E64;
+    }
+    .menu__list{
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        background-color: #FFFFFF;
+        display: block;
+        top: -370px;
+        transition: all 0.5s;
+        border: 1px solid #001E64;
+        border-radius: 25px;
+        z-index: 5;
+    }
+    .menu{
+        margin-left: auto;
+        margin-top: 12px;
+        margin-right: 20px;
+    }
+    .menu__link{
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        /* pointer-events: none; */
+    }
+    .menu__link:hover{
+        border: none;
+    }
+    .menu__list.menu__list--active{
+        top: 75px;
+    }
+}
+@media (max-width: 980px){
+    .product__content-box{
+        margin-top: 20px;
+    }
+    .product__content-wrapper {
+        display: block;
+    }
+    .product__content-items{
+        margin: 0 auto;
+    }
+    .product__content-names {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .product__content-name{
+        margin-bottom: 0;
+    }
+    .product__content-names .slick-dots{
+        margin: 0 auto;
+        margin-top: 20px;
+        left: 0;
+        right: 0;
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .product__content-names .slick-dots button{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #001E64;
+        margin: 0 10px;
+        font-size: 0;
+    }
+    .product__content-names .slick-dots li::before {
+        display: none;
+    }
+    .product__benefits-wrapper {
+        padding: 0px 55px;
+        display: block;
+    }
+    .product__benefits-text {
+        margin: 0px auto 20px;
+    }
+    .product__benefits {
+        padding-bottom: 118px;
+        padding-top: 383px;
+        margin-top: -152px;
+    }
+
+}
+@media (max-width: 745px){
+    .header__title{
+        padding-left: 0;
+        font-size: 50px;
+        line-height: 66px;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 650px){
+    .product__content-name.slick-current {
+        font-size: 29px;
+    }
+    .product__content-items{
+        width: 100%;
+    }
+    .product__content{
+        padding-top: 50px;
+    }
+    .seafood__items {
+        padding-top: 50px;
+    }
+    .footer__logos {
+        margin-top: 43px;
+    }
+}
+
+@media (max-width: 575px){
+    .product__content-box{
+        display: block;
+    }
+    .product__content-list{
+        width: 100%;
+    }
+}
+@media (max-width: 470px){
+    .header__title{
+        font-size: 34px;
+        line-height: 44px;
+    }
+    .header-slider{
+        padding-left: 50px;
+    }
+    .slick-dots{
+        left: 5px;
+    }
+    .slick-prev, .slick-next{
+        left: 9px;
+    }
+    .header__content-btn{
+        left: 50px;
+    }
+    .seafood__article {
+        padding-top: 35px;
+    }
+}
+
+@media (max-width: 375px){
+    .header-slider .slick-dots{
+        display: none;
+    }
+    .slick-next, .slick-prev{
+        display: none;
+    }
+    .product__content {
+        padding-top: 10px;
+    }
+    .product__content-names .slick-dots {
+        margin-top: 5px;
+        width: 0%;
+    }
+    .product__content-names .slick-dots button {
+        width: 14px;
+        height: 14px;
+        margin: 0px 8px;
+    }
+    .product__content-names .slick-dots
+    .header__title{
+        padding-top: 125px;
+    }
+    .phone{
+        margin-right: 0;
+    }
+    .logo{
+        margin-left: 0;
+        width: 30%;
+    }
+    .menu__list{
+        left: 10%;
+        right: 10%;
+    }
+    .header-slider{
+        padding-left: 0;
+        padding-top: 0;
+    }
+    .header__content-btn{
+        left: 10%;
+    }
+}
+
+@media (max-width: 335px){
+    .header__content-btn{
+        left: 0;
+    }
+    .product__content-btn {
+        padding: 12px 63px;
+        font-size: 23px;
+        line-height: 30px;
+    }
+}
+@media (max-width: 306px){
+    .header__title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .header-slider__text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .header__content-btn {
+        padding: 12px 75px;
+        font-size: 23px;
+    }   
+    .product__content-names .slick-dots button {
+        width: 13px;
+        height: 13px;
+        margin: 0px 6px;
+    }
+    .product__benefits-wrapper {
+        padding: 0px 34px;
+    }
+}
+
+.header-slider__text-mode_eng{
+    font-size: 19px;
+    line-height: 24px;
+}
